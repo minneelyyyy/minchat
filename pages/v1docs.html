@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+<head></head>
+<body>
+<h1>Minchat API v1</h1>
+<p>This is the documentation for the Minchat API.
+If you are on this documentation, it means you already know what the base endpoint is.
+Just add the following endpoints to the end of <code>/api/v1</code> to use them.
+You must also, for every request, fill the <code>Authorization</code> header
+in your HTTP requests with your token.</p>
+
+<code>POST /SendMessage/&lt;channel&gt;</code>
+<p>Sends a message to the <code>channel</code> denoted by a channel id.</p>
+<h3>Body</h3>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <th><code>content</code></th>
+        <th><code>string</code></th>
+        <th><code>The content of the message</code></th>
+    </tr>
+</table>
+<h3>Response</h3>
+<p>The response is a regular message structure.</p>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <th><code>id</code></th>
+        <th><code>integer</code></th>
+        <th><code>The unique message id</code></th>
+    </tr>
+    <tr>
+        <th><code>content</code></th>
+        <th><code>string</code></th>
+        <th><code>The content of the message</code></th>
+    </tr>
+    <tr>
+        <th><code>channel</code></th>
+        <th><code>integer</code></th>
+        <th><code>The id of the channel the message was sent to</code></th>
+    </tr>
+    <tr>
+        <th><code>author</code></th>
+        <th><code>integer</code></th>
+        <th><code>the id of the author of the message</code></th>
+    </tr>
+</table>
+</body>
+</html>
